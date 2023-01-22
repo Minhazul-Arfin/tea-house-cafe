@@ -8,25 +8,44 @@
     <title>Tea House Cafe</title>
     <!-- Tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- custom colors -->
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'gray': '#777777',
-                    }
-                }
-            }
-        }
-    </script>
+    <!-- daisyUI -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.47.0/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body>
+<body class="bg-white w-auto">
     <header>
         <!-- navbar -->
+        <div class="navbar bg-gray-300 rounded-lg">
+            <div class="flex-1">
+                <a class="btn btn-ghost capitalize  text-3xl text-sky-800">Tea House Cafe</a>
+            </div>
+            <div class="flex-none gap-2">
+                <div class="form-control">
+                    <input type="text" placeholder="Search" class="input input-bordered" />
+                </div>
+                <div class="dropdown dropdown-end">
+                    <label tabindex="0" class="btn btn-ghost btn-circle avatar">
+                        <div class="w-10 rounded-full">
+                            <img src="images/cup.png" />
+                        </div>
+                    </label>
+                    <ul tabindex="0"
+                        class="mt-3 p-2 shadow menu menu-compact dropdown-content bg-base-100 rounded-box w-52">
+                        <li>
+                            <a class="justify-between">
+                                Profile
+                                <span class="badge">New</span>
+                            </a>
+                        </li>
+                        <li><a>Settings</a></li>
+                        <li><a>Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
         <!-- banner -->
-        <section class="container mx-auto px-16 lg:px-36 lg:flex pt-10 mb-28 bg-stone-100">
+        <section class="container mx-auto px-16 lg:px-36 lg:flex pt-10 mb-28 bg-stone-100 rounded-xl">
 
             <!-- left-banner -->
             <div class="py-16 md:px-10 md:py-24 ">
@@ -273,7 +292,7 @@
             </div>
         </div>
     </section>
-    
+
     <!-- footer -->
     <footer class="bg-red-50 px-16 md:px-32 min-h-full">
         <div class="grid md:grid-cols-2 gap-4">
